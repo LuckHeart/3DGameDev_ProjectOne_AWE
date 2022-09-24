@@ -10,10 +10,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] CharacterController controller;
     [SerializeField] float gravity = -20f;
     Vector3 verticalVelocity = Vector3.zero;
+    public RaycastShoot raycastShoot;
 
     public bool isGrounded;
     [SerializeField] float jumpHeight = 3.5f;
     public bool jump;
+    public bool shoot;
 
     public void Awake()
     {
@@ -61,5 +63,10 @@ public class PlayerController : MonoBehaviour
     public void OnJumpPressed()
     {
         jump = true;
+    }
+
+    public void OnShootPressed()
+    {
+        raycastShoot.Shoot();
     }
 }

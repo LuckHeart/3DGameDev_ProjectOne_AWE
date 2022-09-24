@@ -15,6 +15,7 @@ public class InputManager : MonoBehaviour
     [SerializeField] PlayerController playerCon;
     [SerializeField] MouseLook mouseLook;
 
+
     public void Awake()
     {
         PlayerControls = new PlayerControls();
@@ -22,6 +23,7 @@ public class InputManager : MonoBehaviour
 
         movement.Move.performed += ctx => horizontalInput = ctx.ReadValue<Vector2>();
         movement.Jump.performed += _ => playerCon.OnJumpPressed();
+        movement.Shoot.performed += _ => playerCon.OnShootPressed();
 
         movement.MouseX.performed += ctx => mouseInput.x = ctx.ReadValue<float>();
         movement.MouseY.performed += ctx => mouseInput.y = ctx.ReadValue<float>();
