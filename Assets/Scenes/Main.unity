@@ -400,6 +400,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 727148777200751897, guid: 189e96218da00bd42bebbdcb1c55f4f0, type: 3}
+      propertyPath: sensitivityX
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 727148777200751897, guid: 189e96218da00bd42bebbdcb1c55f4f0, type: 3}
+      propertyPath: sensitivityY
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 727148777200751898, guid: 189e96218da00bd42bebbdcb1c55f4f0, type: 3}
       propertyPath: m_Name
       value: Player
